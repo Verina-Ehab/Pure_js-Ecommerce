@@ -6,9 +6,38 @@
     <title>Admin Products Page</title>
     <link rel="stylesheet" href="../css/products.css" />
     <link rel="icon" type="image/x-icon" href="../../image/E-commImg/admin.png" />
+<style>
+  .popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
+}
 
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+</style>
   </head>
   <body>
+                  <div id="popup" class="popup hidden">
+  <p id="popupMessage"></p>
+</div>
     <div class="container">
       <!-- Sidebar -->
       <div class="sidebar">
@@ -107,6 +136,8 @@
             </div>
             <div class="form-group">
               <label>Sizes:</label>
+
+
               <div class="size-choices">
                 <label
                   ><input type="checkbox" name="size[]" value="S" /> S</label
