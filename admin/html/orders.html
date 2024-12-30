@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Orders</title>
-  <link rel="stylesheet" href="../css/order.css">
-  <link rel="icon" type="image/x-icon" href="../../image/E-commImg/admin.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Orders</title>
+    <link rel="stylesheet" href="../css/order.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../image/E-commImg/admin.png"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div class="sidebar">
+        <h1>Dashboard</h1>
+        <ul>
+          <li><a href="categorys.html">Categories</a></li>
+          <!-- <hr> -->
+          <li><a href="./products.html">Products</a></li>
+          <!-- <hr> -->
+          <li><a href="#">Orders</a></li>
+        </ul>
+      </div>
 
-</head>
-<body>
-  <div id="admin-orders">
-    <h1>Admin Orders Management</h1>
-    <div id="search-bar">
-      <input type="text" id="search-input" placeholder="Search by User Name or Order ID">
-      <button id="search-button">Search</button>
+      <div id="admin-orders">
+        <h1>Admin Orders Management</h1>
+        <div id="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by User Name or Order ID"
+          />
+          <button id="search-button">Search</button>
+        </div>
+        <div id="order-container"></div>
+        <div id="pagination-container"></div>
+      </div>
     </div>
-    <div id="order-container"></div>
-    <div id="pagination-container"></div>
-  </div>
+    <div class="sidebar"></div>
 
-  <!-- Popup Message -->
-  <div id="popup-message" class="popup">
-    <span id="popup-text"></span>
-  </div>
+    <!-- Popup Message -->
+    <div id="popup-message" class="popup">
+      <span id="popup-text"></span>
+    </div>
 
-  <script type="module" src="../js/orders.js"></script>
-</body>
+    <script type="module" src="../js/orders.js"></script>
+  </body>
 </html>
